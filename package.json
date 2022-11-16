@@ -1,7 +1,7 @@
 {
-  "name": "kreattix-library-base",
-  "private": true,
-  "version": "0.0.1",
+  "name": "kreattix-design-colors",
+  "private": false,
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "dist"
@@ -21,14 +21,16 @@
     "preview": "vite preview",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{jsx,ts,tsx}'",
-    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc"
+    "format": "prettier --write src//**/*.ts --config ./.prettierrc"
   },
   "peerDependencies": {
     "react": "16.8.0 || >=17.x",
     "react-dom": "16.8.0 || >=17.x"
   },
   "devDependencies": {
+    "@types/color": "^3.0.3",
     "@types/node": "^18.11.9",
+    "@types/node-sass": "^4.11.3",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
@@ -50,5 +52,8 @@
   },
   "keywords": [],
   "author": "Prince Patel",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "color": "^4.2.3"
+  }
 }

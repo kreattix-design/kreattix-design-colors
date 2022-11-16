@@ -23,7 +23,7 @@ export default defineConfig((configEnv) => ({
   build: {
     lib: {
       entry: resolve('src', 'index.ts'),
-      name: 'kreattix-library-base',
+      name: 'kreattix-design-colors',
       formats: ['es', 'umd'],
       fileName: (format) => `index.${format}.js`,
     },

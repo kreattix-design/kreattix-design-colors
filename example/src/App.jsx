@@ -1,14 +1,13 @@
 import './App.css'
 
-import { Helloworld } from 'kreattix-library-base'
+import Colors from 'kreattix-design-colors'
 
 import reactLogo from './assets/react.svg'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ background: Colors.primary }}>
       <div>
-        <Helloworld />
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
