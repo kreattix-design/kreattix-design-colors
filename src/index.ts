@@ -1,5 +1,7 @@
 import Color from 'color'
 
+import { ColorProps } from './types'
+
 export const lighten = (color: Color<string>, amount: number) => {
   return color.lightness(color.lightness() + amount).hex()
 }
@@ -43,20 +45,20 @@ const getGrays = () => {
   }
 }
 
-export const getVar = (varName: string) => {
-  return `var(--kd-${varName})`
+export const getVar = (varName: string, prefix = 'kd-') => {
+  return `var(--${prefix}-${varName})`
 }
 
-export const getVariant = (varName: string) => {
+export const getVariant = (varName: string, prefix = 'kd-') => {
   return {
-    [`${varName}`]: getVar(varName),
-    [`${varName}-hover`]: getVar(varName + '-hover'),
-    [`${varName}-active`]: getVar(varName + '-active'),
-    [`${varName}-rgb`]: getVar(varName + '-rgb'),
+    [`${varName}`]: getVar(varName, prefix),
+    [`${varName}-hover`]: getVar(varName + '-hover', prefix),
+    [`${varName}-active`]: getVar(varName + '-active', prefix),
+    [`${varName}-rgb`]: getVar(varName + '-rgb', prefix),
   }
 }
 
-const Colors = {
+const Colors: ColorProps = {
   ...generatePallate('blueGray', '#607d8b'),
   ...generatePallate('brown', '#8e5f4e'),
   ...generatePallate('red', '#ff392b'),
