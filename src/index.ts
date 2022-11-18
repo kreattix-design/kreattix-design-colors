@@ -40,8 +40,8 @@ const getGrays = () => {
     [`gray700`]: darken(color, 30),
     [`gray800`]: darken(color, 20),
     [`gray900`]: darken(color, 10),
-    [`light`]: darken(color, 90),
-    [`dark`]: darken(color, 10),
+    [`light`]: lighten(color, 90),
+    [`dark`]: darken(color, 20),
   }
 }
 
